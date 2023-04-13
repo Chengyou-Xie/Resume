@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style/style.css" />
+        <title>Flappy Bird</title>
+    </head>
+    <body>
+        <div id="end-page">
+            <h1>遊戲結束!</h1>
+            <p>分數: <span id="end-score"></span></p>
+            <p>最佳成績: <span id="record"></span></p>
+            <button id="restart">重新開始</button>
+        </div>
+
+        <div id="game-container">
+            <h1>分數: <span id="score-display">0</span></h1>
+            <canvas id="game-canvas" width="400" height="600"></canvas>
+            <h3>請透過空白鍵來控制飛行</h3>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>

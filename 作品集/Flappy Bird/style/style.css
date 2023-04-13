@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: lightblue;
+  font-family: "Press Start 2P", cursive;
+  background-image: linear-gradient(to right, lightblue, white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body div#end-page {
+  display: none;
+  border: 5px solid gray;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, 0);
+  z-index: 100;
+}
+body div#end-page p {
+  margin: 10px 0;
+}
+body div#end-page button {
+  padding: 5px 7px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+body div#end-page button:hover {
+  transform: scale(1.05);
+}
+body div#game-container {
+  text-align: center;
+}
+body div#game-container canvas {
+  border: 5px solid gray;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-image: url("../images/Background.png");
+  background-size: cover;
+  z-index: 1;
+}
+body div#game-container div#score-display {
+  color: gray;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+body div#game-container.blur {
+  filter: blur(5px);
+}/*# sourceMappingURL=style.css.map */

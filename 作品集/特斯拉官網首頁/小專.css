@@ -1,0 +1,257 @@
+.navbar,
+.upper h2 {
+    font-family: 'Prompt', sans-serif;
+}
+
+
+.navbar {
+    height: 56px;
+}
+
+.logo {
+    /* 讓logo可以上浮，不影響 html ul 元素置中的效果 */
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    width: 140px;
+}
+
+.nav2 {
+    position: absolute;
+    right: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+    margin-right: 3px;
+    margin-left: 3px;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+.section {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* 讓 .lower可以在每一頁面都顯示（.lower為absolute） */
+    position: relative;
+}
+
+#section1 {
+    background-image: url('./image/model-Y.jpg');
+}
+
+#section2 {
+    background-image: url('./image/model-3.jpg');
+}
+
+#section3 {
+    background-image: url('./image/model-S.jpg');
+}
+
+#section4 {
+    background-image: url('./image/model-X.jpg');
+}
+
+#section5 {
+    background-image: url('./image/house.jpg');
+}
+#section6 {
+    background-image: url('./image/charge.jpg');
+}
+
+.section a {
+    /* text-decoration: none; */
+    color: black;
+}
+
+
+
+
+.upper {
+    margin-top: 12%;
+}
+
+.upper h2 {
+    font-size: 40px;
+}
+
+.upper p {
+    font-size: 14px;
+}
+
+
+
+.lower {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.lower .btn1 {
+    /* 因GSAP無法正常套用動畫，因此設定為inline-block */
+    display: inline-block;   
+
+    background: rgba(23, 26, 32, 0.8);
+    color: white;
+    padding: 10px 88px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 12px 0 0;
+    font-size: 14px;
+}
+
+.lower .btn2 {
+    /* 因GSAP無法正常套用動畫，因此設定為inline-block */
+    display: inline-block; 
+    
+    background: rgba(244, 244, 244, 0.65);
+    color: black;
+    padding: 10px 88px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 0 0 12px;
+    font-size: 14px;
+}
+
+.lower div p {
+    margin-top: 40px;
+    font-size: 14px;
+}
+#btnSingle{
+    color: white;
+    display: inline-block; 
+
+    background: rgba(23, 26, 32, 0.8);
+    padding: 10px 88px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 115px 0;
+    font-size: 14px;
+}
+#btnSingle2{
+    color: white;
+    display: inline-block; 
+
+    background: rgb(0, 0, 0, 0.9);
+    padding: 10px 88px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 115px 0;
+    font-size: 14px;
+}
+
+
+
+
+/* 將套用 Fullpage 後出現的異常覆蓋 */
+.fp-overflow{
+    all: unset;
+}
+.fp-watermark{
+    display: none;
+}
+
+/* 套用 GSAP 動畫，初始狀態先預設為看不見 */
+.upper h2, .upper p, .lower .btn1, .lower .btn2, .arrow{
+    opacity: 0;
+    visibility: hidden;
+}
+
+footer{
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+    left: 0; right: 0;
+    margin: 10px auto;
+}
+footer>ul>li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 10px;    
+    font-size: 12px;
+    color: rgb(94, 93, 93);
+}
+footer>ul{
+    padding: 0;
+}
+
+
+
+.navbar-collapse {
+    -webkit-transition: height 0.01s;
+    -moz-transition: height 0.01s;
+    -ms-transition: height 0.01s;
+    -o-transition: height 0.01s;
+    transition: height 0.01s;
+  
+  }
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .logo {
+        left: auto;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        z-index: 1000;
+    }
+
+    .navbar-nav {
+        position: relative;
+        right: 0px;
+    }
+
+    .collapse {
+        position: relative;
+        left: 0px;
+        background: white;
+        margin-left: 80%;
+        margin-top: -60px;
+        margin-right: -20px;
+        padding: 120px 30px 30px 30px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    
+
+    .lower .btn1, .lower .btn2 {
+        padding: 10px 50px;
+        display: block;
+        margin: 10px;        
+    }
+    .collapse {
+        margin-left: 70%;
+    }
+    .lower{
+        padding: 20px;
+    }
+    .lower div p {
+        margin-top: 30px;
+    }
+    footer>ul>li{
+        margin-right: 3px;  
+    }
+    
+
+}
+

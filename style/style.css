@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2px;
+  transition: all 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(250, 250, 250);
+}
+body header {
+  padding: 12px 20px;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px 1px rgb(83, 81, 81);
+}
+body header nav a.logo {
+  text-decoration: none;
+  color: rgb(83, 81, 81);
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 40px;
+  display: none;
+}
+body header nav input[type=checkbox],
+body header nav label {
+  display: none;
+}
+body header nav ul {
+  float: right;
+}
+body header nav ul li {
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 5px;
+  padding: 3px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  float: left;
+  list-style-type: none;
+  transition: 0.25s ease;
+  color: rgb(83, 81, 81);
+}
+body header nav ul li a {
+  color: rgb(83, 81, 81);
+  text-decoration: none;
+}
+body header nav ul li:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 1px rgb(83, 81, 81);
+}
+body main {
+  margin-top: 90px;
+  padding: 30px 30px;
+}
+body main section#description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -90px;
+}
+body main section#description-container img {
+  width: 95%;
+  border-radius: 10px;
+  filter: brightness(130%) contrast(90%) saturate(90%) sepia(20%) drop-shadow(0px 0px 5px rgb(83, 81, 81));
+  z-index: -1;
+}
+body main section#description-container h3 {
+  margin-top: 40px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+body main section#description-container p {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  padding: 0 50px;
+  text-align: center;
+  line-height: 1.75;
+}
+body main section#description-container p i {
+  font-weight: 550;
+}
+body main section#works {
+  margin-top: 40px;
+  margin-bottom: -90px;
+  width: 100%;
+}
+body main section#works h1 {
+  padding-top: 120px;
+  padding-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+body main section#works div.container {
+  padding: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+body main section#works div.container div.work {
+  border-radius: 12px;
+  border: 3px solid rgb(224, 224, 224);
+  padding: 20px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: calc((100% - 45px) / 4);
+}
+body main section#works div.container div.work:nth-child(4) {
+  margin-right: 0px;
+}
+body main section#works div.container div.work img {
+  width: 100%;
+}
+body main section#works div.container div.work h5 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 12px 0;
+}
+body main section#works div.container div.work p {
+  text-align: justify;
+  padding: 0 20px;
+}
+body main section#works div.container div.work a {
+  text-decoration: none;
+  display: inline-block;
+  color: blue;
+  margin-top: 10px;
+}
+body main section#works div.container div.work:hover {
+  border: 3px solid gray;
+}
+body main section#experience {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 200px;
+  margin-bottom: -90px;
+}
+body main section#experience h1 {
+  padding-top: 120px;
+  padding-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+body main section#experience hr {
+  margin: 5px 0;
+}
+body main section#experience p {
+  margin: 8px 0;
+  text-align: center;
+}
+body main section#skill {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 200px;
+}
+body main section#skill h1 {
+  padding-top: 120px;
+  padding-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+body main section#skill hr {
+  margin: 5px 0;
+}
+body main section#skill p {
+  margin: 8px 0;
+  text-align: center;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(219, 217, 217);
+  width: 100%;
+  height: 200px;
+}
+body footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body footer .container p {
+  margin: 5px 0;
+}
+body footer .container p a {
+  text-decoration: none;
+  color: blue;
+  font-weight: 600;
+}
+body footer p.copyRight {
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid white;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 1450px) {
+  body main section#works div.container div.work {
+    width: calc((100% - 30px) / 3);
+  }
+  body main section#works div.container div.work:nth-child(4n) {
+    margin-right: 15px;
+  }
+  body main section#works div.container div.work:nth-child(3n) {
+    margin-right: 0px;
+  }
+  body main section#skill,
+  body main section#experience {
+    padding: 0 100px;
+  }
+}
+@media screen and (max-width: 992px) {
+  body header nav a.logo {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  body header nav input[type=checkbox] {
+    background-color: white;
+  }
+  body header nav input[type=checkbox]:checked ~ ul {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    right: 20px;
+    left: 20px;
+  }
+  body header nav label {
+    display: block;
+    background: rgb(83, 81, 81);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 3px;
+  }
+  body header nav label:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: white;
+    margin: 7px 5px;
+    box-shadow: 0px 10px 0px white, 0px 20px 0px white;
+  }
+  body header nav ul {
+    display: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: rgb(212, 212, 212);
+  }
+  body header nav ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: left;
+    text-indent: 20px;
+    margin-left: 0px;
+  }
+  body header nav ul li a {
+    color: #777;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    width: 100%;
+    text-decoration: none;
+  }
+  body header nav ul li:hover {
+    cursor: pointer;
+    position: relative;
+  }
+  body header nav ul li:hover ul {
+    display: block;
+  }
+  body header nav ul li:hover a {
+    color: #777;
+  }
+  body main #description-container h3 {
+    font-size: 1.5rem;
+  }
+  body main #description-container p {
+    padding: 0 10px;
+  }
+  body main section#works div.container div.work {
+    width: calc((100% - 15px) / 2);
+  }
+  body main section#works div.container div.work:nth-child(3) {
+    margin-right: 15px;
+  }
+  body main section#works div.container div.work:nth-child(2n) {
+    margin-right: 0px;
+  }
+  body main section#skill,
+  body main section#experience {
+    padding: 0 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body main section#works div.container {
+    padding: 0;
+  }
+  body main section#works div.container div.work {
+    width: 100%;
+    margin-right: 0;
+  }
+  body main section#works div.container div.work h5 {
+    font-size: 1.25rem;
+  }
+  body main section#works div.container div.work p {
+    padding: 0;
+  }
+  body main section#skill,
+  body main section#experience {
+    padding: 0 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
