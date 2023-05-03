@@ -113,12 +113,12 @@ body main section#works div.container {
 body main section#works div.container div.work {
   border-radius: 12px;
   border: 3px solid rgb(224, 224, 224);
-  padding: 20px;
+  padding: 10px;
   margin-right: 15px;
   margin-bottom: 15px;
   width: calc((100% - 45px) / 4);
 }
-body main section#works div.container div.work:nth-child(4) {
+body main section#works div.container div.work:nth-child(4n) {
   margin-right: 0px;
 }
 body main section#works div.container div.work img {
@@ -302,7 +302,7 @@ body footer p.copyRight {
   body main section#works div.container div.work {
     width: calc((100% - 15px) / 2);
   }
-  body main section#works div.container div.work:nth-child(3) {
+  body main section#works div.container div.work:nth-child(3n) {
     margin-right: 15px;
   }
   body main section#works div.container div.work:nth-child(2n) {
